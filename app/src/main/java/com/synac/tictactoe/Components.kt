@@ -11,8 +11,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.synac.tictactoe.ui.theme.Aqua
-import com.synac.tictactoe.ui.theme.GreenishYellow
+import com.synac.tictactoe.ui.theme.*
 
 @Composable
 fun BoardBase() {
@@ -22,29 +21,29 @@ fun BoardBase() {
             .padding(10.dp),
     ) {
         drawLine(
-            color = Color.Gray,
-            strokeWidth = 5f,
+            color = Color.Black,
+            strokeWidth = 7f,
             cap = StrokeCap.Round,
             start = Offset(x = size.width / 3, y = 0f),
             end = Offset(x = size.width / 3, y = size.height)
         )
         drawLine(
-            color = Color.Gray,
-            strokeWidth = 5f,
+            color = Color.Black,
+            strokeWidth = 7f,
             cap = StrokeCap.Round,
             start = Offset(x = size.width * 2 / 3, y = 0f),
             end = Offset(x = size.width * 2 / 3, y = size.height)
         )
         drawLine(
-            color = Color.Gray,
-            strokeWidth = 5f,
+            color = Color.Black,
+            strokeWidth = 7f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = size.height / 3),
             end = Offset(x = size.width, y = size.height / 3)
         )
         drawLine(
-            color = Color.Gray,
-            strokeWidth = 5f,
+            color = Color.Black,
+            strokeWidth = 7f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = size.height * 2 / 3),
             end = Offset(x = size.width, y = size.height * 2 / 3)
@@ -56,11 +55,11 @@ fun BoardBase() {
 fun Circle() {
     Canvas(
         modifier = Modifier
-            .size(60.dp)
+            .size(55.dp)
             .padding(5.dp)
     ) {
         drawCircle(
-            color = Aqua,
+            color = kp2,
             style = Stroke(width = 20f)
         )
     }
@@ -74,14 +73,14 @@ fun Cross() {
             .padding(5.dp)
     ) {
         drawLine(
-            color = GreenishYellow,
+            color = kp1,
             strokeWidth = 20f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = 0f),
             end = Offset(x = size.width, y = size.height)
         )
         drawLine(
-            color = GreenishYellow,
+            color = kp1,
             strokeWidth = 20f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = size.height),
@@ -94,7 +93,7 @@ fun Cross() {
 fun WinVerticalLine1() {
     Canvas(modifier = Modifier.size(300.dp)) {
         drawLine(
-            color = Color.Red,
+            color = kp3,
             strokeWidth = 10f,
             cap = StrokeCap.Round,
             start = Offset(x = size.width*1/6, y = 0f),
@@ -107,7 +106,7 @@ fun WinVerticalLine1() {
 fun WinVerticalLine2() {
     Canvas(modifier = Modifier.size(300.dp)) {
         drawLine(
-            color = Color.Red,
+            color = kp3,
             strokeWidth = 10f,
             cap = StrokeCap.Round,
             start = Offset(x = size.width*3/6, y = 0f),
@@ -120,7 +119,7 @@ fun WinVerticalLine2() {
 fun WinVerticalLine3() {
     Canvas(modifier = Modifier.size(300.dp)) {
         drawLine(
-            color = Color.Red,
+            color = kp3,
             strokeWidth = 10f,
             cap = StrokeCap.Round,
             start = Offset(x = size.width*5/6, y = 0f),
@@ -133,7 +132,7 @@ fun WinVerticalLine3() {
 fun WinHorizontalLine1() {
     Canvas(modifier = Modifier.size(300.dp)) {
         drawLine(
-            color = Color.Red,
+            color = kp3,
             strokeWidth = 10f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = size.height*1/6),
@@ -146,7 +145,7 @@ fun WinHorizontalLine1() {
 fun WinHorizontalLine2() {
     Canvas(modifier = Modifier.size(300.dp)) {
         drawLine(
-            color = Color.Red,
+            color = kp3,
             strokeWidth = 10f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = size.height*3/6),
@@ -159,7 +158,7 @@ fun WinHorizontalLine2() {
 fun WinHorizontalLine3() {
     Canvas(modifier = Modifier.size(300.dp)) {
         drawLine(
-            color = Color.Red,
+            color = kp3,
             strokeWidth = 10f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = size.height*5/6),
@@ -172,7 +171,7 @@ fun WinHorizontalLine3() {
 fun WinDiagonalLine1() {
     Canvas(modifier = Modifier.size(300.dp)) {
         drawLine(
-            color = Color.Red,
+            color = kp3,
             strokeWidth = 10f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = 0f),
@@ -185,7 +184,7 @@ fun WinDiagonalLine1() {
 fun WinDiagonalLine2() {
     Canvas(modifier = Modifier.size(300.dp)) {
         drawLine(
-            color = Color.Red,
+            color = kp3,
             strokeWidth = 10f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = size.height),
